@@ -1,0 +1,151 @@
+
+.info{
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, gold 45%, gold 65%);
+}
+.info1{
+    padding: 5px;
+    color: black;
+    padding-bottom: 0px;
+    text-align: center;
+}
+.contact{
+    font-size: 210%;
+    line-height: 2.8rem;
+    margin: 5%;
+    margin-left: .3%;     
+}
+.forms {
+    position: absolute;
+    top: 35%;
+    left: 64%;
+    width: 35%;
+    height: 360px;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+  }
+  
+  .forms h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  .forms .login{
+    width: 100%;
+    height: 45px;
+    background: gold;
+    border-radius: 7px    ;
+  }
+  
+  .forms label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 190%;
+  }
+  
+  .forms input[type="text"],
+  .forms input[type="password"] {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    background: transparent;
+    border-radius: 10px;
+    font-size: 170%;
+  }
+  .forms button[type="submit"] {
+    width: 45%;
+    height: 60px;
+    float: right;
+    font-size: 2em;
+    background-color: gold;
+    color: black;
+    padding: 15px;
+    border: 2px solid goldenrod; 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+  }
+  
+  .forms button[type="submit"]:hover {
+    background-color: yellow;
+    border: 2px solid gold;
+  }
+
+   /* Mobile Styles max-width: 477px */
+@media only screen and (min-width: 768px) {
+  .main { max-width: 477px; }
+  .info{height: 30px;}
+  .info1{
+    font-size: 120%;}
+  .contact{
+    font-size: 120%;
+    line-height: 2.1rem;
+    }
+    .forms {
+      position: absolute;
+      top: 34%;
+      left: 64%;
+      width: 35%;
+      height: 230px;
+    }
+    .forms label{font-size: 120%;
+      margin-bottom: 0px;
+    }
+    .forms input[type="text"],
+  .forms input[type="password"]{
+    font-size: 110%; 
+    height: 30px;
+    margin-bottom: 5px;
+    width: 75%;
+  }
+  .forms h2{ font-size: 120%; }
+  .forms .login { height: 30px; }
+  .forms button[type="submit"] {
+    width: 40%;
+    height: 30px;
+    font-size: 110%;
+    text-align: center;
+  }
+    
+}
+
+@media only screen and (min-width: 478px) and (max-width: 767px) {
+  .main { min-width: 478; max-width: 767px; }
+  .info{height: 45px;}
+  .info1{
+    font-size: 150%;}
+  .contact{
+    font-size: 150%;
+    line-height: 2.5rem;
+    }
+    .forms {
+      position: absolute;
+      top: 35%;
+      left: 64%;
+      width: 35%;
+      height: 320px;
+    }
+    .forms label{font-size: 150%;
+      margin-bottom: 0px;
+    }
+    .forms input[type="text"],
+  .forms input[type="password"]{
+    font-size: 140%;
+    height: 45px;
+    margin-bottom: 22px;
+    width: 85%;
+  }
+  .forms h2{padding: 7px; font-size: 150%; }
+  .forms .login { height: 45px; }
+  .forms button[type="submit"] {
+    width: 45%;
+    height: 45px;
+    font-size: 140%;
+    text-align: center;
+  }
+}

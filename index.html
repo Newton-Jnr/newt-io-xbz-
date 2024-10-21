@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">   
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+    <title>metitioc.com/login/</title>
+</head>
+<body>
+    <div class="main">
+        <div class="headbar">
+          <div class="logpic">
+          <img src="metlogo.jpg" alt="logo">
+        </div>
+            <div class="logo"><br>
+                <kbd class="lgname">MET<span class="itoc">iTOC</span></kbd>
+            </div>
+            <div class="headname">MET MONITORING WEBSITE</div>
+            <div class="help">
+              <a href="#"><ion-icon name="help-circle"></ion-icon></a>
+            </div>
+
+        </div>
+        <h1 class="info1">GET AHEAD OF OUTAGES: LOGIN TO <span>MET<span class="itoc">iTOC</span></span> FOR PREVENTIVE ALERTS</h1>
+    <div class="info"> 
+    </div>
+    <div class="contact">
+      <p><b>CONTACT US<br><br>
+        MET ENGINEERING COMPANY LIMITED </b><br> 
+         L23-HU, NKRUMAH LAYOUT <br>
+        2nd Cross, 4th Main, KTK 1<sup>st</sup> Stage,<br>
+        ACCRA - A43688, <br>
+        Tel: +233554841018 <br>
+        Email: <a href="#">metengineering@met.africa.com </a><br>
+        Web: <a href="#">www.metengineering.com</a> <br> 
+      </p>
+    </div>
+    <div class="forms">
+      <div class="login"><h2>Member Login</h2></div> 
+        <form> 
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" maxlength="22" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="6" maxlength="25" required>
+          <button type="submit">Login</button>
+        </form>
+      </div> 
+    </div>
+    <div>
+      <footer>
+        <kbd>
+        <hr> &copy 2024, MET engineering company limited. All rights reserved </kbd>
+      </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script>
+        const users = {
+            "aaaa": "111111",
+            "ffff": "222222",
+            "ssss": "333333"
+          };
+          
+
+        const loginForm = document.querySelector(".forms form");
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const username = document.getElementById("username").value; 
+  const password = document.getElementById("password").value;
+
+  if (users[username] && users[username] === password) {
+    window.location.href = "home.html";
+  } else {
+    alert("Invalid username or password");
+  }
+});
+
+
+      </script>
+</body>
+</html>

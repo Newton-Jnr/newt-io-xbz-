@@ -1,0 +1,185 @@
+
+
+.dashboard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.dash {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-left: 2%; 
+}
+
+.kpi-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kpi {
+  margin-left: 1%;
+  border: 1.5px solid #ccc;
+  border-radius: 7px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  width: 30%;
+}
+
+.kpi h2 {
+  padding: 5px;
+  margin-top: 0;
+}
+.kpi p {
+  padding-left:20px ;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: first baseline;
+  width: 100%;
+  height: 50px;
+  margin-top: 0;
+  background: linear-gradient(to right, rgb(255, 215, 0) 45%, rgb(255, 215, 0) 65%);
+}
+.info1{
+    color: rgb(0, 0, 0);
+    padding-bottom: 0px;
+    text-align: center;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.info label{
+    padding-left: 30px;
+    font-size: 1.5em;
+    color: black;
+  }
+  .info input{
+    width: 16%;
+    height: 35px;
+    border-radius: 5px;
+    background: transparent;
+  }
+  .info button{
+    width: 200px;
+    height: 48px;
+    margin-left: 7%;
+    border-radius: 10px;
+    transition: .3s ease-in;
+    background: rgb(243, 190, 239);
+    color: #000000;
+
+  }
+  .info button:hover{
+    color: rgb(243, 190, 239);
+    background: rgba(0, 0, 0);
+  }
+  .alarm-list {
+    padding: 20px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+  }
+  
+  .alarm-list table {
+    width: 100%;
+  }
+  
+  .alarm-list th, .alarm-list td {
+    border: 1px solid rgb(243, 190, 239);
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alarm-list th {
+    background-color: rgb(241, 194, 243);
+  }
+  
+  .urgency-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: none;
+    animation: blink 2s infinite;    
+    border-radius: 30%;
+    cursor: pointer;
+  }
+  
+  .urgency-checkbox:checked.urgent {
+    background-color: red;
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0% {
+        background-color: red;
+                }
+    50% {
+      background-color: yellow;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+
+  #search-filter {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px; 
+  }
+  
+  #search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .urgency-checkbox:checked.normal {
+    background-color: yellow; 
+  }
+  
+  .urgency-checkbox.delay:checked.low {
+    background-color: blue;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .dash {
+      font-size: 120%;}
+    .kpi h2 {font-size: 110%;}
+    .info{height: 37px;}
+    .info label{font-size: 100%;     padding-left: 3px;}
+    .info button{ width: 13%; height: 30px;     margin-left: 2px;}
+    button h2{font-size: 100%;}
+    .alarm-list h2{ font-size: 120%;}
+    .alarm-list { padding: 2px; border-collapse: collapse;}
+    .alarm-list th, .alarm-list td { border: 1px solid rgb(243, 190, 239);
+      padding: 2px; text-align: center; font-size: 90%; }
+      .urgency-checkbox {width: 15px; height: 15px; border: none;
+        animation: blink 1s infinite;}
+}
+
+@media only screen and (min-width: 478px) and (max-width: 767px) {
+  .dash {
+    font-size: 150%;}
+  .kpi h2 {font-size: 140%;}
+  .info{height: 45px;}
+  .info label{font-size: 130%;     padding-left: 6px;}
+  .info button{ width: 16%; height: 45px;     margin-left: 4%;}
+  button h2{font-size: 130%;}
+  .alarm-list h2{ font-size: 150%;}
+  .alarm-list { padding: 5px; border-collapse: collapse;}
+  .alarm-list th, .alarm-list td { border: 1px solid rgb(243, 190, 239);
+    padding: 5px; text-align: center; font-size: 120%; }
+    .urgency-checkbox {width: 18px; height: 18px; border: none;
+      animation: blink 1.5s infinite;}
+  
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="global.css">     
+    <title>Document</title>
+</head>  
+<body>
+    <div class="main">
+        <div class="headbar">
+          <div class="logpic"> 
+            <img src="metlogo.jpg" alt="logo">
+          </div>
+            <div class="logo"> <br>
+                <kbd class="lgname">MET<span class="itoc">iTOC</span></kbd>
+            </div>
+            <div class="headname">MET  MONITORING WEBSITE</div>
+            <div class="help">
+              <a href="#"><ion-icon name="help-circle"></ion-icon></a>
+            </div>
+        </div>
+            
+            <div class="dashboard">
+                <div class="dash">
+                    <label>DASHBOARD</label>
+                </div>
+                
+                <div class="kpi-container">
+                  <div class="kpi">
+                    <h2>Online Sites: 
+                    <label id="online-sites">0</label></h2>
+                  </div>
+                  <div class="kpi">
+                    <h2>Offline Sites:
+                    <label id="offline-sites">0</label></h2>
+                  </div>
+                  <div class="kpi">
+                    <h2>Reception:
+                    <label id="network-availability">0%</label></h2>
+                  </div>
+                </div>
+            </div>
+            <div class="info" id="srch">
+                <label for="sitename">Site Name:</label>
+                <input type="text" id="sitename" list="site-name" placeholder="Site Name">
+                <datalist id="site-name">
+                    <option value="DORMAA LIB">
+                    <option value="DORMAA 2">
+                    <option value="DORMAA 3_BTF">
+                </datalist>                
+                <label for="region">Region:</label>
+                <input type="text" id="region" list="reg" placeholder="Region">
+                <datalist id="reg">
+                    <option value="Ashanti Region">
+                    <option value="Bono region">
+                    <option value="Central region">
+                </datalist>                
+                <label for="siteid">Site ID:</label>
+                <input type="text" id="siteid" list="site-ids" placeholder="Site ID">
+            <datalist id="site-ids">
+                <option value="600535">
+                <option value="600818">
+                <option value="603435">
+            </datalist>
+                <button type="submit" id="submit"><h2>SEARCH</h2></button>
+            </div>
+            <div class="alarm-list">
+              <h2>Alarm List</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Site ID</th>
+                    <th>Site Name</th>
+                    <th>Last Updated</th>
+                    <th>Power Source</th>
+                    <th>Alarms</th>
+                    <th>Severity</th>
+                    <th>Urgency</th>
+                  </tr>
+                </thead>
+                <tbody id="alarm-list-table">
+                  <!-- <!-- Alarm list will be populated here -->
+                </tbody>
+              </table>
+            </div>
+
+          
+        </div>
+       <div>
+            <footer>
+              <kbd>
+              <hr> &copy 2024, MET engineering company limited. All rights reserved </kbd>
+            </footer>
+          </div>
+        
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="home.js"></script>
+    <script src="siteinfo.js"></script>
+    <script>
+        const Sitename = document.getElementById('sitename');
+        const Region = document.getElementById('region');
+        const Siteid = document.getElementById('siteid');
+        const submitBtn = document.getElementById('submit');
+        
+        submitBtn.addEventListener('click', () => {
+          const sitename = Sitename.value;
+          const region = Region.value;
+          const siteid = Siteid.value;
+          console.log(`Site Name: ${sitename}`);
+          console.log(`Region: ${region}`);
+          console.log(`Site ID: ${siteid}`);
+
+        });
+
+        document.getElementById("alarm").addEventListener("click", function() {
+          var rows = document.querySelectorAll("#alarm-list tr");
+          rows.forEach(function(row) {
+            row.style.display = "table-row";
+          });
+        });
+        
+      document.getElementById("urgent").addEventListener("click", function() {
+        var rows = document.querySelectorAll("#alarm-list tr");
+        rows.forEach(function(row) {
+          var checkbox = row.querySelector(".checkbox");
+          if (checkbox.dataset.category === "urgent") {
+            row.style.display = "table-row";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      });
+    
+      document.getElementById("normal").addEventListener("click", function() {
+        var rows = document.querySelectorAll("#alarm-list tr");
+        rows.forEach(function(row) {
+          var checkbox = row.querySelector(".checkbox");
+          if (checkbox.dataset.category === "normal") {
+            row.style.display = "table-row";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      });
+        
+    </script>
+    
+</body>
+</html>
